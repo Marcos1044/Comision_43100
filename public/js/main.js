@@ -48,9 +48,7 @@ function agregarProducto() {
     }
 }
 
-
-
-function filtrarPrecio(precio) {
+function filtrarPrecio(precio){
 
     const filtrados = productos.filter((prod)=>prod.precio <= precio);
     return filtrados; 
@@ -58,31 +56,25 @@ function filtrarPrecio(precio) {
 }
 
 function precioMax() {
-    while (precioMax != 0)  {
-        if (isNaN(precioMax) || (precioMax < 0)) {
-            alert('Ingrese un numero valido');
-        }else {
-            const prodsFiltrados = filtrarPrecio(precioMax);
-            console.table(prodsFiltrados);
-        }
-        let precioMaximo = parseFloat(prompt('Ingresa el precio maximo a abonar. Ponga 0 para salir: ')) 
+
+    productos.push( {id: 8, foto: "foto", nombre: "Crema Facial", precio: 5000});
+    console.table(productos);
+
+    let precioMaximo = parseFloat(prompt('Ingresa el precio maximo a abonar. Ponga 0 para salir: '));
+
+    while (precioMaximo != 0){
+          if (isNaN(precioMaximo) || precioMaximo < 0){
+              alert('Ingrese un numero valido');
+          }else{
+              const prodsFiltrados = filtrarPrecio(precioMaximo);
+              console.table(prodsFiltrados);
+          }
+          precioMaximo = parseFloat(prompt('Ingresa el precio maximo a abonar. Ponga 0 para salir: ')) ;
     }
 }
 
 
-//Probando Funcion sumar iva automaticamente
-//  function sumaIva(precio) {
-//            const precioIva = productos.precio * 1.21;
-//             return precioIva;            
-// }
-
-
-
 
 logueo();
-// let precioMaximo = parseFloat(prompt('Ingresa el precio maximo a abonar. Ponga 0 para salir: '))
 precioMax();
 agregarProducto();
-productos.push( {id: 8, foto: "foto", nombre: "Crema Facial", precio: "5.000,00"})
-
-
