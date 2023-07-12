@@ -6,14 +6,14 @@ const dermaglos = [{
     }, {
         id: 2,
         foto: "assets/Dermaglos_Facial/dermaglos_crema_hidratante_spf_piel_normal_a_seca_x_ml1596900815036.jpg",
-        nombre: "CREMA FACIAL HIDRATANTE SPF 20 PIEL NORMAL A SECA X 70ML",
+        nombre: "CREMA FACIAL HIDRATANTE SPF 20 PIEL NORMAL X 70ML",
         precio: 4225
     },
     {
         id: 3,
         foto: "assets/Dermaglos_Facial/dermaglos_emulsin_hidratante_piel_normalmixta_x_ml1596900962143.jpg",
         nombre: "EMULSIÓN HIDRATANTE DIA PIEL NORMAL-MIXTA X 75ML",
-        precio: 4.224
+        precio: 4224
     },
     {
         id: 4,
