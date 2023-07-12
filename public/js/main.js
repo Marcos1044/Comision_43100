@@ -132,7 +132,7 @@ function renderizarProductos(listaProds) {
     let botones = document.getElementsByClassName('compra');
     for(const boton of botones){
         boton.addEventListener('click',()=>{
-            const prodACarro = dermaglos.find((producto) => producto.id == boton.id);
+            const prodACarro = productos.find((producto) => producto.id == boton.id);
             agregarACarrito(prodACarro);
         })
     }
@@ -218,11 +218,11 @@ function vaciarCarrito() {
 
 //JSON
 async function obtenerJsonProds() {
-    const URLJSON = '../dermaglos.json'; 
+    const URLJSON = 'dermaglos.json'; 
     const respuesta = await fetch(URLJSON);
     const data = await respuesta.json();
     productos = data;
-    renderizarProductos(dermaglos);
+    renderizarProductos(productos);
 }
 
 
